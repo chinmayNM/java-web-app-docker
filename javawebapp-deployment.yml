@@ -1,34 +1,35 @@
 ---
-apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
-kind: Deployment
+apiVersion: v1
+kind: ReplicationController
 metadata:
-  name: app-deployment
+  labels:
+    name: javawebapp
+  name: java-controller
 spec:
-  selector:
-    matchLabels:
-      app: java-web-app
-  replicas: 2 # tells deployment to run 2 pods matching the template
+  replicas: 1
   template:
     metadata:
       labels:
-        app: java-web-app
+        name: javawebapp
     spec:
       containers:
-      - name: chinmaynm8
-        image: chinmaynm8/dockerhub
+      - image: chinmaynm8/dockerhub
+        name: javawebapp
         ports:
-        - containerPort: 8080 
+        - name: javawebapp
+          containerPort: 8080  
 ---
 # Node Port Service
 apiVersion: v1
 kind: Service
 metadata:
   labels:
-    name: java-web-app
+    name: javawebapp
+  name: javawebapp
 spec:
   type: NodePort
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    name: java-web-app
+    name: javawebapp
