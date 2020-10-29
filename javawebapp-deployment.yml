@@ -17,7 +17,7 @@ spec:
         name: javawebapp
         ports:
         - name: javawebapp
-          containerPort: 8080  
+          containerPort: 80 
 ---
 # Node Port Service
 apiVersion: v1
