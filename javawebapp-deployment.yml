@@ -6,12 +6,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: java-web-app-docker
+      app: java-web-app
   replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: java-web-app-docker
+        app: java-web-app
     spec:
       containers:
       - name: chinmaynm8/dockerhub
@@ -24,11 +24,11 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    name: java-web-app-docker
+    name: java-web-app
 spec:
   type: NodePort
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    name: java-web-app-docker
+    name: java-web-app
