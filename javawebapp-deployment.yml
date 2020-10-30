@@ -18,11 +18,12 @@ spec:
       containers:
       - name: chinmaynm8
         image: delixus/java-web-app:$buildNumber
+        ports:
+        - containerPort: 8080
         imagePullPolicy: Always
       imagePullSecrets:
       - name: regcred
-        ports:
-        - containerPort: 8080
+        
       
       
 ---
