@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: chinmaynm8
-        image: delixus/java-web-app:$buildNumber
+        image: chinmaynm8/dockerhub
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
