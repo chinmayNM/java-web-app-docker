@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: chinmaynm8
-        image: chinmaynm8/dockerhub
+        image: delixus/java-web-app
         imagePullPolicy: Always
       imagePullSecrets:
       - name: regcred
