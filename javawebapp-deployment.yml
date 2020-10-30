@@ -17,10 +17,10 @@ spec:
     spec:
       containers:
       - name: chinmaynm8
-        image: chinmaynm8/dockerhub
+        image: chinmaynm8/dockerhub:$buildNumber
         ports:
         - containerPort: 8080
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
       imagePullSecrets:
       - name: regcred
         
