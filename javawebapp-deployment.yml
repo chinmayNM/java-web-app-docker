@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: javawebapp
+  name: javawebapp-deployment
   labels:
     app: javawebapp
 spec:
@@ -18,9 +18,12 @@ spec:
       containers:
       - name: chinmaynm8
         image: chinmaynm8/dockerhub
+        imagePullPolicy: Always
+      imagePullSecrets:
+      - name: regcred
         ports:
         - containerPort: 8080
-      imagePullPolicy: Always
+      
       
 ---
 # Node Port Service
