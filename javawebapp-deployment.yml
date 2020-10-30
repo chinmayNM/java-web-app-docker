@@ -16,10 +16,10 @@ spec:
         app: javawebapp
     spec:
       containers:
-      - name: chinmaynm8
-        image: chinmaynm8/dockerhub
       imagePullSecrets:
       - name: regcred
+      - name: chinmaynm8
+        image: chinmaynm8/dockerhub
         ports:
         - containerPort: 80
 ---
