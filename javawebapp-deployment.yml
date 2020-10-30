@@ -20,7 +20,7 @@ spec:
         image: chinmaynm8/dockerhub
         ports:
         - containerPort: 8080
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
       imagePullSecrets:
       - name: regcred
         
