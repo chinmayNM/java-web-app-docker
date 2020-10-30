@@ -18,6 +18,8 @@ spec:
       containers:
       - name: chinmaynm8
         image: chinmaynm8/dockerhub
+      imagePullSecrets:
+      - name: regcred
         ports:
         - containerPort: 80
 ---
