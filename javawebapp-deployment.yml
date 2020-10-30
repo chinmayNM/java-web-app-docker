@@ -16,12 +16,12 @@ spec:
         app: javawebapp
     spec:
       containers:
-      imagePullSecrets:
-      - name: regcred
       - name: chinmaynm8
         image: chinmaynm8/dockerhub
         ports:
         - containerPort: 8080
+      imagePullSecrets:
+      - name: $kubernetes_secrets
 ---
 # Node Port Service
 apiVersion: v1
