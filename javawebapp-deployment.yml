@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: chinmaynm8
-        image: chinmaynm8/dockerhub:$buildNumber
+        image: chinmaynm8/dockerhub:1
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
